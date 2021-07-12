@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
+.dvl-checkout-container {
+    width: 100%;
+    margin: 20px auto;
+}
+
+.dvl-checkout-container .checkout-thanks {
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.dvl-checkout-container .checkout-thanks h2 {
+    font-size: 20px;
+    font-weight: 800;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.dvl-checkout-container .checkout-thanks p {
+    font-size: 18px;
+    font-weight: 500;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.dvl-checkout-container .checkout-thanks .btn-checkout-backtostore {
+    border: none;
+    background-color: teal;
+    color: white;
+    font-size: 20px;
+    font-weight: 800;
+    font-family: 'Open Sans', sans-serif;
+    border-radius: 20px;
+    padding: 10px;
+    cursor: pointer;
+    outline: none;
+    transition: 0.5s ease-in-out;
+}
+
+.dvl-checkout-container .checkout-thanks .btn-checkout-backtostore:hover {
+    background-color: tomato;
+}
+
+.dvl-checkout-container .checkout-order-inputs {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.dvl-checkout-container .checkout-order-inputs .checkout-group {
+    padding: 10px;
+}
+
+.dvl-checkout-container .checkout-order-inputs .checkout-group label {
+    font-size: 20px;
+    font-weight: 800;
+    font-family: 'Open Sans', sans-serif;
+    margin-left: 20px;
+    padding: 5px;
+}
+
+.dvl-checkout-container .checkout-order-inputs .checkout-group .name-input,
+.dvl-checkout-container .checkout-order-inputs .checkout-group .address-input,
+.dvl-checkout-container .checkout-order-inputs .checkout-group .city-input,
+.dvl-checkout-container .checkout-order-inputs .checkout-group .state-input,
+.dvl-checkout-container .checkout-order-inputs .checkout-group .zip-input,
+.dvl-checkout-container .checkout-order-inputs .checkout-group .country-input {
+    height: 30px;
+    font-size: 20px;
+    font-weight: 800;
+    font-family: 'Open Sans', sans-serif;
+    border-radius: 10px;
+    padding: 5px;
+    outline: none;
+    display: block;
+    border: 1px solid black;
+}
+
+.dvl-checkout-container .checkout-order-inputs .checkout-group .btn-checkout-back,
+.dvl-checkout-container .checkout-order-inputs .checkout-group .btn-submit-order {
+    width: 200px;
+    background-color: #f9ca24;
+    height: 40px;
+    outline: none;
+    border: none;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 800;
+    font-size: 20px;
+    padding: 5px;
+    cursor: pointer;
+    color: white;
+    transition: 0.5s ease-in-out;
+    border-radius: 10px;
+    margin-top: 10px;
+    display: block;
+}
+
+.dvl-checkout-container .checkout-thanks .btn-to-payment {
+    width: 200px;
+    background-color: #f9ca24;
+    height: 40px;
+    outline: none;
+    border: none;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 800;
+    font-size: 20px;
+    padding: 5px;
+    cursor: pointer;
+    color: white;
+    transition: 0.5s ease-in-out;
+    border-radius: 10px;
+    margin: 10px auto;
+    display: block;
+}
+
+.dvl-checkout-container .checkout-thanks .btn-to-payment:hover {
+    background-color: #6ab04c;
+}
+
+.dvl-checkout-container .checkout-order-inputs .checkout-group .btn-checkout-back:hover,
+.dvl-checkout-container .checkout-order-inputs .checkout-group .btn-submit-order:hover {
+    background-color: #6ab04c;
+}
+
+.dvl-checkout-container .checkout-order-inputs .checkout-group .text-alert-red {
+    color: red;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 800;
+    font-size: 20px;
+}

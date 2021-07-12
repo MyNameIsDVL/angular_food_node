@@ -1,0 +1,23 @@
+<div class="dvl-cartcheck-container">
+    <div class="cartcheck" *ngIf="cart.lines.length == 0">
+        Koszyk jest pusty
+        <fa-icon class="sb-check-empty-icon" [icon]="faShoppingBasket"></fa-icon>
+    </div>
+    <div class="cartcheck" *ngIf="cart.lines.length > 0">
+        <div class="cartcheck-flex" *ngFor="let line of cart.lines">
+            <img class="img-cartcheck" [src]="line.product.img" />
+            <h2>{{ line.product.name }}</h2>
+            <p>{{ line.product.price | currency:"zł" }}</p>
+            <p>{{ (line.lineTotal) | currency:"zł" }}</p>
+            <input type="number" class="cartcheck-count-input" [value]="line.quantity" (change)="cart.updateQuantity(line.product, $event.target.value)" />
+            <button class="btn-delete-p" (click)="cart.removeLine(line.product.id)">
+                <fa-icon class="sb-check-icon" [icon]="faTrashAlt"></fa-icon>
+            </button>    
+        </div>  
+    </div> 
+    <p class="cartcheck-cartPrice">{{ cart.cartPrice | currency:"zł" }}</p> 
+    <button class="btn-continue-buy" routerLink="/store">Kontynuuj zakupy</button>
+    <button class="btn-checkout" routerLink="/checkout" [disabled]="cart.lines.length == 0">
+        <fa-icon class="sb-check-icon" [icon]="faShoppingCart"></fa-icon> Do kasy
+    </button>
+</div>

@@ -1,0 +1,276 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
+.cart-products-bas::-webkit-scrollbar {
+    width: 0.5em;
+}
+
+.cart-products-bas::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+.cart-products-bas::-webkit-scrollbar-thumb {
+    background-color: darkgrey;
+}
+
+.dvl-cart-detail-container {
+    width: 100%;
+}
+
+.dvl-cart-detail-container h2 {
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+}
+
+.dvl-cart-detail-container .delivery-address-container {
+    width: 60%;
+    margin: 0 auto;
+}
+
+.dvl-cart-detail-container .delivery-address-container label {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12px;
+    font-weight: 800;
+    display: block;
+    padding: 10px;
+}
+
+.dvl-cart-detail-container .delivery-address-container .delivery-input {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12px;
+    font-weight: 800;
+    height: 30px;
+    border: none;
+    background-color: white;
+    border-radius: 10px;
+    outline: none;
+    padding: 5px;
+    width: 100%;
+    transition: 0.5s ease-in-out;
+    border-bottom: 1px solid black;
+}
+
+.dvl-cart-detail-container .delivery-address-container .delivery-input:focus {
+    background-color: #f6e58d;
+}
+
+/*cart*/
+
+.cart-products-bas {
+    width: 60%;
+    height: 400px;
+    overflow-y: auto;
+    margin: 20px auto;
+    padding: 5px;
+    text-align: center;
+}
+
+.cart-products-bas .sb-icon {
+    font-size: 80px;
+}
+
+.cart-products-bas .dvl-card-product {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+    margin-top: 20px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.cart-products-bas .dvl-card-product img {
+    width: 100px;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.cart-products-bas .dvl-card-product .card-deital-content {
+    display: block;
+}
+
+.cart-products-bas .dvl-card-product .card-deital-content .detail-top {
+    display: flex;
+    position: relative;
+}
+
+.cart-products-bas .dvl-card-product .card-deital-content .detail-top h2 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
+    font-weight: 800;
+    margin-left: 10px;
+}
+
+.cart-products-bas .dvl-card-product .card-deital-content .detail-top span {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    position: absolute;
+    right: 0;
+    top: 10px;
+    background-color: #badc58;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.cart-products-bas .dvl-card-product .card-deital-content .detail-bottom {
+    display: flex;
+}
+
+.cart-products-bas .dvl-card-product .card-deital-content .detail-bottom .btn-delete {
+    height: 30px;
+    width: 30px;
+    border: none;
+    background-color: white;
+    cursor: pointer;
+    position: relative;
+    top: 15px;
+    margin-left: 5px;
+    outline: none;
+}
+
+.cart-products-bas .dvl-card-product .card-deital-content .detail-bottom .btn-delete fa-icon {
+    transition: 0.5s ease-in-out;
+}
+
+.cart-products-bas .dvl-card-product .card-deital-content .detail-bottom .btn-delete fa-icon:hover {
+    color: red;
+}
+
+.cart-products-bas .dvl-card-product .card-deital-content .detail-bottom .quan-input {
+    width: 30px;
+    height: 30px;
+    border: none;
+    background-color: white;
+    border-radius: 10px;
+    border-bottom: 1px solid black;
+    position: relative;
+    top: 12px;
+    outline: none;
+    margin-left: 5px;
+    transition: 0.5s ease-in-out;
+    padding: 2px;
+}
+
+.cart-products-bas .dvl-card-product .card-deital-content .detail-bottom .quan-input:focus {
+    background-color: #f6e58d;
+}
+
+.cart-products-bas .dvl-card-product .card-deital-content .detail-bottom .total-price {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+    font-weight: 800;
+    position: relative;
+    top: -8px;
+    padding: 4px;
+    border-radius: 5px;
+    margin-left: 5px;
+}
+
+.dvl-total-sum {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.dvl-total-sum .totalpricesec {
+    display: flex;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
+    font-weight: 800;
+    position: relative;
+}
+
+.dvl-total-sum .totalpricesec p:last-child {
+    position: absolute;
+    right: 0;
+}
+
+.dvl-total-sum .deliveryprice {
+    display: flex;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
+    font-weight: 800;
+    position: relative;
+}
+
+.dvl-total-sum .deliveryprice p:last-child {
+    position: absolute;
+    right: 0;
+}
+
+.dvl-coupon {
+    width: 100%;
+    margin: 20px auto;
+    display: flex;
+}
+
+.dvl-coupon .coupon-input {
+    height: 20px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12px;
+    font-weight: 800;
+    border: none;
+    background-color: white;
+    border-bottom: 1px solid black;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    outline: none;
+    padding: 5px;
+}
+
+.dvl-coupon .coupon-input:focus {
+    background-color: #f6e58d;
+}
+
+.dvl-coupon .btn-coupon {
+    height: 31px;
+    border: none;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 800;
+    font-size: 12px;
+    padding: 5px;
+    cursor: pointer;
+    color: white;
+    background-color: #f9ca24;
+    transition: 0.5s ease-in-out;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.dvl-coupon .btn-coupon:hover {
+    background-color: #badc58;
+}
+
+.dvl-order-product {
+    width: 100%;
+    margin: 30px auto;
+}
+
+.dvl-order-product .btn-order-p {
+    width: 100%;
+    background-color: #f9ca24;
+    height: 40px;
+    outline: none;
+    border: none;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 800;
+    font-size: 20px;
+    padding: 5px;
+    cursor: pointer;
+    color: white;
+    transition: 0.5s ease-in-out;
+    border-radius: 10px;
+}
+
+.dvl-order-product .btn-order-p:hover {
+    background-color: #6ab04c;
+}
+
+.alert-empty {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 800;
+    font-size: 20px;
+    text-transform: uppercase;
+    color: red;
+    text-align: center;
+}

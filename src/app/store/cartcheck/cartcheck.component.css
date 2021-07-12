@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
+.dvl-cartcheck-container {
+    width: 100%;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.dvl-cartcheck-container .cartcheck {
+    border: 1px solid black;
+    width: 90%;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.sb-check-empty-icon {
+    font-size: 200px;
+    display: block;
+}
+
+.dvl-cartcheck-container .cartcheck .cartcheck-flex {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+    border-radius: 20px;
+    width: 600px;
+    margin: 10px auto;
+    position: relative;
+}
+
+.dvl-cartcheck-container .cartcheck .cartcheck-flex .img-cartcheck {
+    width: 200px;
+    height: 100px;
+    object-fit: cover;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.dvl-cartcheck-container .cartcheck .cartcheck-flex h2 {
+    font-size: 20px;
+    font-weight: 800;
+    font-family: 'Open Sans', sans-serif;
+    padding: 10px;
+}
+
+.dvl-cartcheck-container .cartcheck .cartcheck-flex p {
+    font-size: 20px;
+    font-weight: 500;
+    font-family: 'Open Sans', sans-serif;
+    padding: 10px;
+}
+
+.dvl-cartcheck-container .cartcheck .cartcheck-flex .btn-delete-p {
+    border: none;
+    background-color: white;
+    padding: 10px;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    right: 0;
+}
+
+.dvl-cartcheck-container .cartcheck .cartcheck-flex .btn-delete-p .sb-check-icon {
+    font-size: 20px;
+    color: black;
+    cursor: pointer;
+}
+
+.dvl-cartcheck-container .cartcheck .cartcheck-flex .btn-delete-p .sb-check-icon:hover {
+    color: red;
+}
+
+.dvl-cartcheck-container .cartcheck .cartcheck-flex .cartcheck-count-input {
+    width: 40px;
+    height: 30px;
+    font-size: 20px;
+    font-weight: 800;
+    font-family: 'Open Sans', sans-serif;
+    border: 1px solid black;
+    border-radius: 10px;
+    outline: none;
+    padding: 2px;
+}
+
+.dvl-cartcheck-container .cartcheck .cartcheck-flex .cartcheck-count-input:focus {
+    background-color: salmon;
+}
+
+.dvl-cartcheck-container .cartcheck-cartPrice {
+    text-align: right;
+    margin-right: 50px;
+    font-size: 20px;
+    font-weight: 800;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.dvl-cartcheck-container .btn-continue-buy {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #f9ca24;
+    padding: 10px;
+    font-size: 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+    outline: none;
+    position: absolute;
+    right: 50px;
+    color: white;
+}
+
+.dvl-cartcheck-container .btn-continue-buy:hover {
+    background-color:  #6ab04c;
+}
+
+.dvl-cartcheck-container .btn-checkout {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #f9ca24;
+    padding: 10px;
+    font-size: 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+    margin-left: 10px;
+    outline: none;
+    position: absolute;
+    right: 250px;
+    color: white;
+}
+
+.dvl-cartcheck-container .btn-checkout:hover {
+    background-color:  #6ab04c;
+}

@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
+.dvl-sum-container {
+    width: 100%;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 20px;
+    margin: 20px auto;
+}
+
+.dvl-sum-container h2 {
+    font-size: 20px;
+    font-weight: 800;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.dvl-sum-container .btn-sum {
+    position: relative;
+    border: none;
+    background-color: white;
+    outline: none;
+}
+
+.dvl-sum-container .btn-sum .sb-sum-icon {
+    font-size: 100px;
+    color: black;
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+}
+
+.dvl-sum-container .btn-sum .sb-sum-icon:hover {
+    color: #6ab04c;
+}
+
+.dvl-sum-container .btn-sum .span-sum {
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color: red;
+    color: white;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    padding: 2px;
+    font-size: 20px;
+    font-weight: 500;
+    font-family: 'Open Sans', sans-serif;
+}

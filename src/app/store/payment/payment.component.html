@@ -1,0 +1,7 @@
+<div *ngIf="!paidFor">
+    <h1>Do zapłaty {{ cart.cartPrice | currency:"zł" }}</h1>
+</div>
+<div *ngIf="paidFor">
+    <p>Opłatę pobrano, dziękujemy za zakupy w naszym sklepie!</p>
+</div>
+<div #paypal></div>

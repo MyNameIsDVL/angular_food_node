@@ -1,0 +1,57 @@
+<div class="dvl-checkout-container">
+    <div *ngIf="orderSent" class="checkout-thanks">
+        <h2>Dziękujemy!</h2>
+        <p>Dziękujemy za złożenie zamówienia</p>
+        <p>Produkty zostaną wysłane po dokonaniu wpłaty</p>
+        <button class="btn-to-payment" routerLink="/payment">Zapłać</button>
+        <button class="btn-checkout-backtostore" routerLink="/store">Powrót do sklepu</button>
+    </div>
+    <form *ngIf="!orderSent" #form="ngForm" novalidate (ngSubmit)="submitOrder(form)" class="checkout-order-inputs">
+        <div class="checkout-group">
+            <label>Imię i Nazwisko</label>
+            <input class="name-input" #name="ngModel" name="name" [(ngModel)]="order.name" required />
+            <span *ngIf="submitted && name.invalid" class="text-alert-red">
+                Proszę podać imię i nazwisko
+            </span>
+        </div>
+        <div class="checkout-group">
+            <label>Adres</label>
+            <input class="address-input" #address="ngModel" name="address" [(ngModel)]="order.address" required />
+            <span *ngIf="submitted && address.invalid" class="text-alert-red">
+                Proszę podać adres
+            </span>
+        </div>
+        <div class="checkout-group">
+            <label>Miasto</label>
+            <input class="city-input" #city="ngModel" name="city" [(ngModel)]="order.city" required />
+            <span *ngIf="submitted && city.invalid" class="text-alert-red">
+                Proszę podać miasto
+            </span>
+        </div>
+        <div class="checkout-group">
+            <label>Województwo</label>
+            <input class="state-input" #state="ngModel" name="state" [(ngModel)]="order.state" required />
+            <span *ngIf="submitted && state.invalid" class="text-alert-red">
+                Proszę podać Województwo
+            </span>
+        </div>
+        <div class="checkout-group">
+            <label>Kod pocztowy</label>
+            <input class="zip-input" #zip="ngModel" name="zip" [(ngModel)]="order.zip" required />
+            <span *ngIf="submitted && zip.invalid" class="text-alert-red">
+                Proszę podać kod pocztowy
+            </span>
+        </div>
+        <div class="checkout-group">
+            <label>Kraj</label>
+            <input class="country-input" #country="ngModel" name="country" [(ngModel)]="order.country" required />
+            <span *ngIf="submitted && country.invalid" class="text-alert-red">
+                Proszę podać kraj
+            </span>
+        </div>
+        <div class="checkout-group">
+            <button class="btn-checkout-back" routerLink="/store">Powrót</button>
+            <button class="btn-submit-order" type="submit">Złóż zamówienie</button>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,62 @@
+<div class="dvl-container">
+    <div class="dvl-search-input">
+        <div class="search">
+            <div>
+                <input [(ngModel)]="query" type="text" id="search-bar" name="search" placeholder="Co byś chciał zjeść?..."/>
+            </div>
+        </div>   
+    </div>
+    <div class="dvl-slider-grid">
+        <div class="slider-grid-left">
+            <app-slider></app-slider>
+        </div>
+        <div class="slider-grid-right">
+            <app-cartsummary></app-cartsummary>
+        </div>
+    </div>
+    <div class="dvl-category">
+        <button class="btn-category" (click)="changeCategory()">
+            Wszystkie
+        </button>
+        <button *ngFor="let cat of categories" class="btn-category" [class.active]="cat == selectedCategory" (click)="changeCategory(cat)">
+            {{ cat }}
+        </button>
+    </div>
+    <div class="dvl-menu-container">
+        <div class="dvl-select-container">
+            <select class="dvl-select" [value]="productsPerPage" (change)="changePageSize($event.target.value)">
+                <option value="3">3 na stronie</option>
+                <option value="4">4 na stronie</option>
+                <option value="6">6 na stronie</option>
+                <option value="8">8 na stronie</option>
+            </select>
+        </div>
+        <div class="dvl-paggination-container">
+            <button *counter="let page of pageCount" (click)="changePage(page)" class="dvl-paggination" [class.active]="page == selectedPage">
+                {{ page }}
+            </button>
+        </div>
+    </div>
+    <div class="dvl-cards">
+        <div class="dvl-box-products">
+            <div class="dvl-product" *ngFor="let product of products | search:'id,name':query">
+                <img [src]="product.img" />
+                <h4 class="product-header">
+                    {{ product.name }}
+                    <span class="product-price">
+                        {{ product.price | currency: "zł" }}
+                    </span>
+                </h4>
+                <div class="product-text">
+                    {{ product.description }}                   
+                </div>
+                <button class="btn-addtocart" (click)="addProductToCart(product)">
+                    <fa-icon [icon]="faShoppingCart"></fa-icon>
+                </button>
+            </div>
+        </div>
+        <div class="dvl-box-cart">
+            <app-cart-detail></app-cart-detail>
+        </div>
+    </div>
+</div>

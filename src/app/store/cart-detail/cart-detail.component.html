@@ -1,0 +1,55 @@
+<div class="dvl-cart-detail-container">
+    <h2>Twoje zamówienie:</h2>
+    <div class="delivery-address-container">
+        <label>Adres dostawy</label>
+        <input type="text" name="text" class="delivery-input" placeholder="Wprowadź adres..." />
+    </div>
+    <div class="cart-products-bas" *ngIf="cart.itemCount > 0">
+        <div class="dvl-card-product" *ngFor="let line of cart.lines">
+            <img [src]="line.product.img" />
+            <div class="card-deital-content">
+                <div class="detail-top">
+                    <h2>{{ line.product.name }}</h2>
+                    <span>{{ line.product.price | currency:"zł" }}</span>
+                </div>
+                <div class="detail-bottom">
+                    <button class="btn-delete" (click)="cart.removeLine(line.product.id)">
+                        <fa-icon [icon]="faTrashAlt"></fa-icon>
+                    </button>
+                    <input type="number" class="quan-input" [value]="line.quantity" (change)="cart.updateQuantity(line.product, $event.target.value)" />
+                    <p class="total-price">{{ (line.lineTotal) | currency:"zł" }}</p>
+                </div>
+            </div>
+        </div>
+        <div class="dvl-total-sum">
+            <div class="totalpricesec">
+                <p>Razem:</p>
+                <p>{{ cart.cartPrice | currency:"zł " }}</p>
+            </div>
+            <div class="deliveryprice">
+                <p>Dostawa:</p>
+                <p>zł 0</p>
+            </div>
+        </div>
+        <div class="dvl-coupon">
+            <input (input)="inputString=$event.target.value" #coupInput  type="text" id="coupon" name="coupon" class="coupon-input" [placeholder]="badCoupon" />
+            <button class="btn-coupon" (click)="couponChecker(inputString)"><fa-icon [icon]="faBarcode"></fa-icon> Dodaj kupon</button>
+        </div>
+        <div class="dvl-total-sum">
+            <div class="totalpricesec">
+                <p>Do zapłaty:</p>
+                <p *ngIf="lastPriceTotal == 0">{{ cart.cartPrice | currency:"zł " }}</p>
+                <p *ngIf="lastPriceTotal > 0">{{ lastPriceTotal | currency:"zł " }}</p>
+            </div>
+        </div>
+        <div class="dvl-order-product">
+            <button class="btn-order-p" routerLink="/checkout" [disabled]="cart.lines.length == 0">
+                <fa-icon [icon]="faShoppingCart"></fa-icon> Do kasy
+            </button>
+        </div>
+    </div>
+    <div class="cart-products-bas" *ngIf="cart.itemCount == 0">
+        <fa-icon class="sb-icon" [icon]="faShoppingBasket"></fa-icon>
+        <p class="alert-empty">Strasznie tu pusto!!</p>
+    </div>
+</div>
